@@ -1,14 +1,14 @@
 <template>
   <h1>This is Body Component</h1>
-  <input-todo @emit-add-todo-item="addTodoItem"></input-todo>
+  <InputTodo @emitAddTodoItem="addTodoItem"></InputTodo>
   <div v-for="todoItem in todoList" :key="todoItem">
-    <display-todo :todo="todoItem" @emit-delete-item="deleteItem"></display-todo>
+    <DisplayTodo :todo="todoItem" @emitDeleteItem="deleteItem"></DisplayTodo>
   </div>
 </template>
 
 <script>
 import InputTodo from "./InputTodo.vue";
-import DisplayTodo from "./DisplayTodo";
+import DisplayTodo from "./DisplayTodo.vue";
 
 export default {
   components: { InputTodo, DisplayTodo },
@@ -26,7 +26,7 @@ export default {
     deleteItem: function (todoItem) {
       let index = this.todoList.indexOf(todoItem);
       console.log(this.todoList);
-      console.log(index, todoItem);      
+      console.log(index, todoItem);
       this.todoList.splice(index, 1);
       console.log(this.todoList);
     },

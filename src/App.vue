@@ -1,31 +1,17 @@
 <template>
   <AppBody></AppBody>
-  
-
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-
-// export default {
-//   name: 'App',
-//   components: {
-//     HelloWorld
-//   }
-// }
-
-import AppBody from './components/AppBody';
+import AppBody from "./components/AppBody";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    AppBody
-  }
-}
-
-
+    AppBody,
+  },
+};
 </script>
 
 <style>
-
 </style>
